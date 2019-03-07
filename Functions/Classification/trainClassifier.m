@@ -89,7 +89,7 @@ lcp = length(classifierParameters);
 switch classifierType
   
  case {'logisticRegression'}
-  fprintf('trainClassifier: using %s with parameters\n',classifierType);disp(classifierParameters);  
+%   fprintf('trainClassifier: using %s with parameters\n',classifierType);disp(classifierParameters);  
   [models] = classifierLogisticRegression(examples,labels,classifierParameters);
   
  case {'SMLR'}

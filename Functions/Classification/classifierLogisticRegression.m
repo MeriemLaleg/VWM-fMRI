@@ -117,13 +117,13 @@ function [models] = classifierLogisticRegression( varargin )
           stepsize = stepsize / 10;
           weights = zeros(nFeatures,nClasses);
           nIterations = 0;
-          fprintf('decimating stepsize as %d and restarting\n', stepsize);
+%           fprintf('decimating stepsize as %d and restarting\n', stepsize);
       end
       
       nIterations = nIterations + 1;
       %fprintf(' nIterations %d\n LogL %d\n stepsize %d\n',nIterations,logL,stepsize);      
   end
-  fprintf('running %d iterations\n', nIterations);
+%   fprintf('running %d iterations\n', nIterations);
   
   %% Now prepare output in a cell array
   models = cell(nClasses+1,1);

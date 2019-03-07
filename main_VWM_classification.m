@@ -1,6 +1,6 @@
-clear all; clc; close all; warning('off')
-addpath ./Functions;addpath Functions/Classification;
-addpath ./Functions/StarPlusFunctions; addpath ./Functions/VWM
+% clear all; clc; close all; warning('off')
+% addpath ./Functions;addpath Functions/Classification;
+% addpath ./Functions/StarPlusFunctions; addpath ./Functions/VWM
 
 %% addpath to StarPlus Dataset 
 
@@ -36,6 +36,6 @@ for subject=1:6
     end
     
     
-Accuracy_av= sum(Accuracy)/size(Accuracy,1);
+Accuracy_av= sum(Accuracy)/size(Accuracy,1)
 
 end

@@ -13,11 +13,13 @@ trials=find([info.cond]>1); % The trials of S and P
 [info0,data0,meta0]=transformIDM_selectTrials(info,data,meta,trials);
 
 %% Select the voxels belong to the specified ROIs
+%  ROI_regions{1}='LIPS';
+%  ROI_regions{2}='LOPER';
 
-[info1,data1,meta1] = transformIDM_selectROIVoxels(info0,data0,meta0,{'CALC'});
+% ROI_regions=[ROI_regions 'LIPS']
+% ROI_regions=[ROI_regions 'LOPER']
 
-
-% 'CALC' 'LIPL' 'LT' 'LTRIA' 'LOPER' 'LIPS' 'LDLPFC'
+[info1,data1,meta1] = transformIDM_selectROIVoxels(info0,data0,meta0,ROI_regions);  % 'CALC' 'LIPL'  'LTRIA' 'LOPER' 'LIPS' 'LDLPFC' 'LT'
 
 %% Returns data for specified firstStimulus
 [infoP,dataP,metaP]=transformIDM_selectTrials(info1,data1,meta1,find([info1.firstStimulus]=='P'));
